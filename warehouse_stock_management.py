@@ -80,7 +80,7 @@ def sub_menu_3():
 
 def sub_menu_4():
     print("""Menu Hapus Data 
-    [1]. Perbaharui data sku_code.
+    [1]. Hapus data.
     [2]. Kembali ke menu utama.
     """)
     input_sub_menu = input("Masukkan menu navigasi yang akan dipilih : ")
@@ -189,8 +189,8 @@ def show_stocks_by_qty_asc():
             if key == "stocks_qty":
                 list_kosong.append(
                     [
-                      inventory_database[i]["sku_code"],
                         inventory_database[i]["stocks_qty"], 
+                        inventory_database[i]["sku_code"],
                         inventory_database[i]["sku_desc"],
                         inventory_database[i]["division"],
                         inventory_database[i]["category"],
@@ -201,10 +201,10 @@ def show_stocks_by_qty_asc():
     print()
     print(f"{'_'*53} INVENTORY TABLE {'_'*70}")
     print(f"{'_'*140}")
-    print(f"{' '*10} Urutan |{' '*4}  Divisi     |{' '*5} Category      |{' '*5} SKU_CODE       |{' '*9} SKU_DESC {' '*9}|      QTY     |      COGS   ")
+    print(f"{' '*10} Urutan |{' '*4}  Divisi     |{' '*5} SKU_CODE       |      QTY     |      COGS   ")
     print(f"{'-'*140}")
     for i in range(len(list_kosong)):
-        print(f"{' '* 5}       ke-{i+1}. \t{list_kosong[i][3]}\t\t{list_kosong[i][4]}\t         \t{list_kosong[i][0]}\t    \t{list_kosong[i][2]}   \t\t   {list_kosong[i][1]}\t  \t {list_kosong[i][5]} ") #Menampilkan data siswa yang berasal dari list kosong
+        print(f"{' '* 5}       ke-{i+1}. \t{list_kosong[i][3]}\t        \t{list_kosong[i][1]}  \t   {list_kosong[i][0]}\t   \t {list_kosong[i][5]} ") #Menampilkan data siswa yang berasal dari list kosong
     print(f"{'-'*140}")
     print(f"{'_'*105} ORDERED BY QTY ASCENDING")
     list_kosong=[] #Mengosongkan kembali list kosong
@@ -216,8 +216,8 @@ def show_stocks_by_qty_desc():
             if key == "stocks_qty":
                 list_kosong.append(
                     [
-                       inventory_database[i]["sku_code"],
                         inventory_database[i]["stocks_qty"], 
+                        inventory_database[i]["sku_code"],
                         inventory_database[i]["sku_desc"],
                         inventory_database[i]["division"],
                         inventory_database[i]["category"],
@@ -228,10 +228,10 @@ def show_stocks_by_qty_desc():
     print()
     print(f"{'_'*53} INVENTORY TABLE {'_'*70}")
     print(f"{'_'*140}")
-    print(f"{' '*10} Urutan |{' '*4}  Divisi     |{' '*5} Category      |{' '*5} SKU_CODE       |{' '*9} SKU_DESC {' '*9}|      QTY     |      COGS   ")
+    print(f"{' '*10} Urutan |{' '*4}  Divisi     |{' '*5} SKU_CODE       |      QTY     |      COGS   ")
     print(f"{'-'*140}")
     for i in range(len(list_kosong)):
-        print(f"{' '* 5}       ke-{i+1}. \t{list_kosong[i][3]}\t\t{list_kosong[i][4]}\t         \t{list_kosong[i][0]}\t    \t{list_kosong[i][2]}   \t\t   {list_kosong[i][1]}\t  \t {list_kosong[i][5]} ") #Menampilkan data siswa yang berasal dari list kosong
+        print(f"{' '* 5}       ke-{i+1}. \t{list_kosong[i][3]}\t        \t{list_kosong[i][1]}  \t   {list_kosong[i][0]}\t   \t {list_kosong[i][5]} ") #Menampilkan data siswa yang berasal dari list kosong
     print(f"{'-'*140}")
     print(f"{'_'*105} ORDERED BY QTY DESCENDING")
     list_kosong=[] #Mengosongkan kembali list kosong
@@ -256,10 +256,10 @@ def show_stocks_by_code_asc():
     print()
     print(f"{'_'*53} INVENTORY TABLE {'_'*70}")
     print(f"{'_'*140}")
-    print(f"{' '*10} Urutan |{' '*4}  Divisi     |{' '*5} Category      |{' '*5} SKU_CODE       |{' '*9} SKU_DESC {' '*9}|      QTY     |      COGS   ")
+    print(f"{' '*10} Urutan |{' '*4}  Divisi     |{' '*5} SKU_CODE       |      QTY     |      COGS   ")
     print(f"{'-'*140}")
     for i in range(len(list_kosong)):
-        print(f"{' '* 5}       ke-{i+1}. \t{list_kosong[i][3]}\t\t{list_kosong[i][4]}\t         \t{list_kosong[i][0]}\t    \t{list_kosong[i][2]}   \t\t   {list_kosong[i][1]}\t  \t {list_kosong[i][5]} ") #Menampilkan data siswa yang berasal dari list kosong
+        print(f"{' '* 5}       ke-{i+1}. \t{list_kosong[i][3]}\t        \t{list_kosong[i][0]}  \t   {list_kosong[i][1]}\t   \t {list_kosong[i][5]} ") #Menampilkan data siswa yang berasal dari list kosong
     print(f"{'-'*140}")
     print(f"{'_'*105} ORDERED BY QTY DESCENDING")
     list_kosong=[] #Mengosongkan kembali list kosong
@@ -282,17 +282,17 @@ def show_stocks_by_code_desc():
     print()
     print(f"{'_'*53} INVENTORY TABLE {'_'*70}")
     print(f"{'_'*140}")
-    print(f"{' '*10} Urutan |{' '*4}  Divisi     |{' '*5} Category      |{' '*5} SKU_CODE       |{' '*9} SKU_DESC {' '*9}|      QTY     |      COGS   ")
+    print(f"{' '*10} Urutan |{' '*4}  Divisi     |{' '*5} SKU_CODE       |      QTY     |      COGS   ")
     print(f"{'-'*140}")
     for i in range(len(list_kosong)):
-        print(f"{' '* 5}       ke-{i+1}. \t{list_kosong[i][3]}\t\t{list_kosong[i][4]}\t         \t{list_kosong[i][0]}\t    \t{list_kosong[i][2]}   \t\t   {list_kosong[i][1]}\t  \t {list_kosong[i][5]} ") #Menampilkan data siswa yang berasal dari list kosong
+        print(f"{' '* 5}       ke-{i+1}. \t{list_kosong[i][3]}\t        \t{list_kosong[i][0]}  \t   {list_kosong[i][1]}\t   \t {list_kosong[i][5]} ") #Menampilkan data siswa yang berasal dari list kosong
     print(f"{'-'*140}")
-    print(f"{'_'*105} ORDERED BY QTY DESCENDING")
+    print(f"{'_'*105} ORDERED BY CODE DESCENDING")
     list_kosong=[] #Mengosongkan kembali list kosong
 
 def delete_sku(index):
     del inventory_database[index]
-    print("Database berhasil dihapus!")
+    print("Data berhasil dihapus!")
 def main_app():
     while navigation_menu!= '5':
         input_menu = navigation_menu()
